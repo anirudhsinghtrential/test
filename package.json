@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "version:dev": "node version/file-generator.js --mode dev",
+    "version:prod": "node version/file-generator.js --mode prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,26 @@
+name: dev-build
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  dev-build:
+    environment: dev-deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: "read"
+      id-token: "write"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bump version and push changes
+        run: |
+          npm run version:dev
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "chore: Bump  build version"
+          git push --follow-tags origin main
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
