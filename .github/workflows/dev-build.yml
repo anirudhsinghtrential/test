@@ -30,7 +30,7 @@ jobs:
 
       - name: Commit and Push Version Update
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}  # Use the Personal Access Token
+          GH_PAT: ${{ secrets.PAT_TOKEN }}  # Use the Personal Access Token
         run: |
           git add .
           git commit -m "chore: Bump build version"
