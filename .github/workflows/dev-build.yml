@@ -32,5 +32,5 @@ jobs:
       - name: Commit and Push Version Update
         run: |
           git add .
-          git commit -m "chore: Bump build version"
+          git commit -m "chore: Bump build version [skip ci]"
           git push https://x-access-token:${GH_PAT}@github.com/anirudhsinghtrential/test.git HEAD:main
