@@ -33,4 +33,4 @@ jobs:
         run: |
           git add .
           git commit -m "chore: Bump build version [skip ci]"
-          git push https://x-access-token:${GH_PAT}@github.com/anirudhsinghtrential/test.git HEAD:main
+          git push origin main
